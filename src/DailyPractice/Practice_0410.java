@@ -49,6 +49,7 @@ public class Practice_0410 {
             System.out.println();
         }
     }
+
     public static void type5(int n) {
         // 상단부
         for (int i = 0; i <= n/2; i++) {
@@ -71,11 +72,50 @@ public class Practice_0410 {
             System.out.println();
         }
     }
+
+    public static void test1(int n) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if(j < n - 1 - i) {
+                    System.out.print(" ");
+                } else {
+                    System.out.print("*");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    public static void heartSJ(boolean[][] heart) {
+        for (int row = 0; row < heart.length; row++) {
+            for (int col = 0; col < heart[row].length; col++) {
+                if (heart[row][col]) {
+                    System.out.print("♡ ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+    }
     public static void main(String[] args) {
-        type1(3);
+/*        type1(3);
         type2(3);
         type3(3);
         type4(3);
-        type5(5);
+        type5(5);*/
+
+        //test1(5);
+
+        boolean[][] heart = {
+                {false, true, true, false, true, true, false},
+                {true, true, true, true, true, true, true},
+                {true, true, true, true, true, true, true},
+                {false, true, true, true, true, true, false},
+                {false, false, true, true, true, false, false},
+                {false, false, false, true, false, false, false}
+        };
+
+        heartSJ(heart);
     }
 }
