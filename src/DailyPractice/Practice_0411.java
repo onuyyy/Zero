@@ -50,7 +50,7 @@ public class Practice_0411 {
                     continue;
                 }
                 sb.delete(cursor, cursor + 1);
-            } else if (cur >= 97 && <=122){
+            } else if (cur >= 97 && cur <= 122){
                 int data = cur;
 
                 if (isCapsLock && isShift) {
@@ -62,7 +62,7 @@ public class Practice_0411 {
                 inputData(sb,(char)data,cursor,isInsert);
                 isShift = false; // SHITF 키는 일회성
                 cursor += 1;
-            } else if (cur >= 48 && <= 57) {
+            } else if (cur >= 48 && cur <= 57) {
 
                 char[] specialKey = {')','!','@','#','$','%','^','&','*','('};
                 // 데이터 입력

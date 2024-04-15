@@ -1,7 +1,9 @@
+package DailyPractice;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class Practice_0410_2 {
+public class Practice_0410_3 {
     public static void solution3(String input, String cmd) {
 
         // L : 커서 왼쪽으로
