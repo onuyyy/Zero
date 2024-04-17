@@ -1,4 +1,4 @@
-package DailyPractice;
+package Zero.Part01;
 
 import java.util.ArrayList;
 import java.util.HashMap;

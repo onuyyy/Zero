@@ -1,4 +1,4 @@
-package DailyPractice;
+package Zero.Part01;
 
 /*
     추상 메소드 abstract

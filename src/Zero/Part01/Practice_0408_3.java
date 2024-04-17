@@ -1,4 +1,4 @@
-package DailyPractice;
+package Zero.Part01;
 
 interface ComputerTool {
     public abstract int compute(int x, int y);

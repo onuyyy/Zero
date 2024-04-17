@@ -1,4 +1,4 @@
-package DailyPractice;
+package Zero.Part01;
 
 public class Practice_0410 {
     public static void solution(int n, int type) {

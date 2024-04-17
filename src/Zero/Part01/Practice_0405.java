@@ -1,4 +1,4 @@
-package DailyPractice;
+package Zero.Part01;
 
 interface School {
     public static final int MAX_CLASS = 20;

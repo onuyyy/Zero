@@ -1,4 +1,4 @@
-package DailyPractice;
+package Zero.Part01;
 
 public class Practice_0411 {
     public static String solution(int[] keyLog) {

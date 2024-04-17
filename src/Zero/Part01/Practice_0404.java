@@ -1,4 +1,4 @@
-package DailyPractice;
+package Zero.Part01;
 
 class Person_0404 {
     String name;

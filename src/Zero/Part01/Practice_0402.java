@@ -1,4 +1,4 @@
-package DailyPractice;
+package Zero.Part01;
 
 public class Practice_0402 {
     public static void main(String[] args) {

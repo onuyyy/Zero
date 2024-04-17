@@ -1,4 +1,4 @@
-package DailyPractice;
+package Zero.Part01;
 
 abstract  class GreenOrc {
     public final String SKIN_COLOR = "Green";

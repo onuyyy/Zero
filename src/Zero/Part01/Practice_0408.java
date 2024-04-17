@@ -1,7 +1,5 @@
-package DailyPractice;
+package Zero.Part01;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
 
 // 사용자 예외 만들기

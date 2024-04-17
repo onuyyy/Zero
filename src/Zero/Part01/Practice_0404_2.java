@@ -1,4 +1,4 @@
-package DailyPractice;
+package Zero.Part01;
 
 /*
     다형성 : 한 객체가 여러 가지 타입을 가질 수 있는 것

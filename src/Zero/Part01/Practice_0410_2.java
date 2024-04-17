@@ -1,4 +1,4 @@
-package DailyPractice;
+package Zero.Part01;
 
 public class Practice_0410_2 {
 

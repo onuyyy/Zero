@@ -1,4 +1,4 @@
-package DailyPractice;
+package Zero.Part01;
 
 interface CompareTool {
     public abstract int getMaxNum(int num1, int num2);
