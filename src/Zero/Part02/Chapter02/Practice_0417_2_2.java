@@ -1,4 +1,4 @@
-package Zero.Part02;
+package Zero.Part02.Chapter02;
 /*
     N과 K가 주어졌을 때 (N, K) 요세푸스 순열 구하기
     N과 K는 N >= K 를 만족하는 양의 정수.

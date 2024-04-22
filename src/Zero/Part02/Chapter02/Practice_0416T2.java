@@ -1,4 +1,4 @@
-package Zero.Part02;
+package Zero.Part02.Chapter02;
 
 class MyStack2 {
     int[] arr;

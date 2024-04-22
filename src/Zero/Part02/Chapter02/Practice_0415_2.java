@@ -1,4 +1,4 @@
-package Zero.Part02;
+package Zero.Part02.Chapter02;
 /*
     배열 arr의 데이터 중 짝수 데이터들의 평균과 홀수 데이터들의 평균을 출력
  */

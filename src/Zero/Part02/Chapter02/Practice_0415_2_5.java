@@ -1,4 +1,4 @@
-package Zero.Part02;
+package Zero.Part02.Chapter02;
 /*
     배열 arr 의 값을 오름차순으로 출력
  */

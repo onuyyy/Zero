@@ -1,4 +1,4 @@
-package Zero.Part02.Part04;
+package Zero.Part02.Chapter04;
 
 import java.util.Arrays;
 

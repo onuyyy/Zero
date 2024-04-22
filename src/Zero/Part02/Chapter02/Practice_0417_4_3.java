@@ -1,4 +1,4 @@
-package Zero.Part02;
+package Zero.Part02.Chapter02;
 /*
     데크 변형
         기본 데크 구조에서 중간 데이터를 추가하는 기능 구현

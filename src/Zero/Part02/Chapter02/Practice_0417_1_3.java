@@ -1,4 +1,4 @@
-package Zero.Part02;
+package Zero.Part02.Chapter02;
 
 // 배열을 이용한 기본 큐 구현 (원형 큐 형태)
 

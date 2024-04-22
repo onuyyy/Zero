@@ -1,4 +1,4 @@
-package Zero.Part02;
+package Zero.Part02.Chapter02;
 /*
     배열 arr에서 target에 해당하는 값의 인덱스를 출력
     해당 값이 여러 개인 경우 가장 큰 인덱스 출력

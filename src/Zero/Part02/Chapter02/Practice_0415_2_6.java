@@ -1,4 +1,4 @@
-package Zero.Part02;
+package Zero.Part02.Chapter02;
 /*
     배열 arr 에서 중복 값을 제거한 새 배열 만들기
  */

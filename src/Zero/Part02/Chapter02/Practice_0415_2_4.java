@@ -1,4 +1,4 @@
-package Zero.Part02;
+package Zero.Part02.Chapter02;
 /*
     배열 arr 에서 peek 값 모두 출력
     peek : 좌우측 값보다 크면 peek 값
