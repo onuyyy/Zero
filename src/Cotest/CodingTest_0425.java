@@ -1,12 +1,11 @@
-package DailyPractice;
+package Cotest;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.*;
+import java.util.Arrays;
+import java.util.Stack;
 import java.util.stream.Collectors;
 
-class Main {
+public class CodingTest_0425 {
 
     public static String solution6(String[] BJ, String[] one, String[] two) {
         String answer = "";
