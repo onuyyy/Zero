@@ -95,6 +95,92 @@ public class Practice_0420_투포인터_2 {
 
         return result;
     }
+
+    public static String solution3(String s) {
+    /*
+        s를 거꾸로 출력
+        단, 각 단어와 알파벳 순서는 그대로 출력한다
+        공백이 여러 개일 시 단어와, 단어 사이 하나의 공백을 제외한 나머지 공백 제거
+
+        입출력 예시
+        입력 : the sky is blue
+        출력 : blue is sky the
+
+        입력 :    hello   java
+        출력 : java hello
+     */
+
+        if(s == null) {
+            return null;
+        }
+        if(s.length() < 2) {
+            return s;
+        }
+
+        s = removeSpaces(s);
+        char[] cArr = s.toCharArray();
+        reverseString(cArr,0 ,s.length() - 1);
+        reverseWords(cArr, s.length());
+
+        return new String(cArr);
+    }
+    public static String removeSpaces(String s) {
+        // 공백 제거
+        int p1 = 0;
+        int p2 = 0;
+
+        // 문자열을 char 배열로 바꿈
+        char[] cArr = s.toCharArray();
+        int length = s.length();
+
+        while(p2 < length) {
+            while (p2 < length && cArr[p2] == ' ') {
+                // 공백이면 p2 증가
+                // 해당 문자열에서 앞쪽에 공백이 있을 경우
+                p2++;
+            }
+
+            while (p2 < length && cArr[p2] != ' ') {
+                // 공백일 때는 p2 지나가고, 아닐 때는 p2에 있는 데이터 채워넣기
+                cArr[p1++] = cArr[p2++];
+            }
+
+            while (p2 < length && cArr[p2] == ' ') {
+                // 문자 뒤로 공백이 있을 때
+                p2++;
+            }
+
+            if(p2 < length) {
+                // 단어와 단어 사이에만 추가
+                cArr[p1++] = ' ';
+            }
+        }
+
+        return new String(cArr).substring(0, p1);
+    }
+    public static void reverseString(char[] cArr, int i, int j) {
+        while (i < j) {
+            // 양 끝을 swap
+            char tmp =cArr[i];
+            cArr[i++] = cArr[j];
+            cArr[j--] = tmp;
+        }
+    }
+    public static void reverseWords(char[] cArr, int length) {
+        int p1 = 0;
+        int p2 = 0;
+
+        while (p1 < length) {
+            while (p1 < p2 || p1 < length && cArr[p1] == ' ') {
+                p1++;
+            }
+            while (p2 < p1 || p2 < length && cArr[p2] != ' ') {
+                p2++;
+            }
+            reverseString(cArr, p1, p2 - 1);
+        }
+    }
+
     public static void main(String[] args) {
 
         System.out.println("== solution1 ==");
@@ -114,6 +200,10 @@ public class Practice_0420_투포인터_2 {
         num1 = new int[]{1,7,4,9};
         num2 = new int[]{7,9};
         System.out.println(Arrays.toString(solution2(num1, num2)));
+
+        System.out.println("== solution3 ==");
+        System.out.println(solution3("the sky is blue"));
+        System.out.println(solution3("  hello    java   "));
 
     }
 }
