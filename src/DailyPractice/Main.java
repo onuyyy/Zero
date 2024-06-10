@@ -1,5 +1,6 @@
 package DailyPractice;
 
+import javax.imageio.plugins.jpeg.JPEGImageReadParam;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -7,6 +8,64 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 class Main {
+
+    public static int solution8(int[] d, int budget) {
+
+        int answer = 0;
+        int sum = 0;
+        Arrays.sort(d);
+
+        for (int i = 0; i < d.length; i++) {
+            if(sum > budget) {
+                break;
+            }
+            sum += budget;
+        }
+
+        if(sum <= budget) {
+            answer = d.length;
+        }
+
+        return answer;
+    }
+
+    public static int solution7(int goal, int[] rocks, int n) {
+        int answer = 0;
+
+        Arrays.sort(rocks);
+
+        int left = 0;
+        int right = goal;
+
+        while(left <= right) {
+            int mid = (left + right) / 2;
+            int cnt = 0;
+            int prev = 0;
+
+            for (int i = 0; i < rocks.length; i++) {
+                if(rocks[i] - prev < mid) {
+                    cnt++;
+                } else {
+                    prev = rocks[i];
+                }
+                if(cnt > n) {
+                    break;
+                }
+            }
+
+            if(goal - prev < mid && cnt <= n) {
+                cnt++;
+            }
+            if(cnt > n) {
+                right = mid - 1;
+            } else {
+                left = mid + 1;
+                answer = mid;
+            }
+        }
+
+        return answer;
+    }
 
     public static String solution6(String[] BJ, String[] one, String[] two) {
         String answer = "";
@@ -143,33 +202,61 @@ class Main {
         }
         return result;
     }
+
+    public static int solution0513(int[] people, int limit) {
+
+        int answer = 0;
+        int start = 0;
+        int end = people.length - 1;
+
+        Arrays.sort(people);
+
+        while (start <= end) {
+            if (people[start] + people[end] <= limit) {
+                start++;
+                end--;
+                answer++;
+            } else {
+                end--;
+                answer++;
+            }
+        }
+
+        return answer;
+    }
+
+    public static String solution0513_2(String number, int k) {
+        int idx = 0;
+        int next = 0;
+        StringBuilder sb = new StringBuilder();
+
+        for (int i = 0; i < number.length() - k; i++) {
+            int max = 0;
+
+            for (int j = idx; j < i + k; j++) {
+                int cur = number.charAt(j);
+
+                if(max < cur) {
+                    max = cur;
+                    cur = idx;
+                }
+            }
+            sb.append(max);
+            idx = next + 1;
+        }
+
+        return sb.toString();
+    }
     public static void main(String[] args) throws IOException {
 
-/*        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//        int[] people = {70,50,80,50};
+//        int limit = 100;
+//        System.out.println(solution0513(people, limit));
 
-        System.out.println("숫자 입력 : ");
-        int num = Integer.parseInt(br.readLine());
+        int goal = 25;
+        int[] rocks = {2,14,11,21,17};
+        int n = 2;
+        System.out.println(solution7(goal, rocks, n));
 
-        for (int i = 0; i < num; i++) {
-            String s = br.readLine();
-            System.out.println(solution(s));
-        }*/
-
-/*        String a = "aacddefg";
-
-        System.out.println(solution2(a));
-
-        String b = "(())<{}>[]";
-        System.out.println(solution3(b));
-
-        String c = "({)}<[>]";
-        System.out.println(solution3(c));*/
-
-        System.out.println("= 3번 =");
-        String d = "ABBA";
-        System.out.println(solution4(d));
-
-        String e = "ABA";
-        System.out.println(solution4(e));
     }
 }
