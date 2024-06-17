@@ -130,6 +130,9 @@ class MinHeap {
                 // 자식 노드가 없는 상황
                 break;
             }
+
+            // 자식 노드 중 더 작은 값을 구한 targetIdx 값과
+            // 현재 cur 비교
             if (heap.get(cur) < heap.get(targetIdx)) {
                 break;
             } else {
