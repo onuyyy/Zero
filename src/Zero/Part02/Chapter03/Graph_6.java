@@ -75,6 +75,7 @@ public class Graph_6 {
         ArrayList<Integer> visitedItem = new ArrayList<>();
         dfs(gr, 0, visitedItem);
 
+        // visitedItem 출발, 도착 지점 둘 다 들어있는지 체크해보기
         if(visitedItem.contains(source) && visitedItem.contains(dest)) {
             System.out.println("True");
         } else {
@@ -92,12 +93,15 @@ public class Graph_6 {
 
         while (!stack.isEmpty()) {
             int curId = stack.pop();
+            // 꺼낸 다음에 visitedItem에 담는다
             visitedItem.add(curId);
             
             // 노드에 간선정보 넣기
             Node cur = gr.adjList[curId];
+            // 인접리스트에서 연결되어 있는 애들을 stack에 넣어준다
             while (cur != null) {
                 if(visited[cur.id] == false) {
+                    // 방문했던 적이 없는 노드들만 stack에 추가한다
                     stack.push(cur.id);
                     visited[cur.id] = true;
                 }
