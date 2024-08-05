@@ -25,6 +25,7 @@ class BinaryTree {
     }
 
     public void inOrder(int idx) {
+        // 왼 > 현 > 오
         int left = 2 * idx + 1;
         int right = 2 * idx + 2;
 
@@ -39,6 +40,7 @@ class BinaryTree {
     }
 
     public void postOrder(int idx) {
+        // 왼 > 오 > 현
         int left = 2 * idx + 1;
         int right = 2 * idx + 2;
 

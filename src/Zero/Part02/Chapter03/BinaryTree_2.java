@@ -2,6 +2,9 @@ package Zero.Part02.Chapter03;
 
 // 연결 리스트를 이용한 이진 트리 구성, 순회
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 class Node3 {
     char data;
     Node3 left;
@@ -78,7 +81,21 @@ class BinaryTree2 {
     }
 
     public void levelOrder(Node3 node) {
+        Queue<Node3> queue = new LinkedList<>();
+        queue.add(node);
 
+        while (!queue.isEmpty()) {
+            Node3 cur = queue.poll();
+
+            System.out.print(cur.data +  " ");
+            if(cur.left != null) {
+                queue.offer(cur.left);
+            }
+
+            if(cur.right != null) {
+                queue.offer(cur.right);
+            }
+        }
     }
 }
 public class BinaryTree_2 {
@@ -100,6 +117,10 @@ public class BinaryTree_2 {
 
         System.out.println("PostOrder");
         bt.postOrder(bt.head);
+        System.out.println();
+
+        System.out.println("LevelOrder");
+        bt.levelOrder(bt.head);
         System.out.println();
     }
 }
