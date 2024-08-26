@@ -139,6 +139,9 @@ class LinkedListPr2 {
 }
 
 public class LinkedList2 {
+
+
+
     public static void main(String[] args) {
         LinkedListPr2 list = new LinkedListPr2(new Node(1, null));
         list.showData();
